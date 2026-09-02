@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import { useAuthStore } from "@/lib/authStore";
-import { IconTrendingUp, IconDollar, IconInventory, IconSales } from "@/components/Icons";
+import { IconTrendingUp, IconDollar, IconInventory, IconSales, IconAlert } from "@/components/Icons";
 
 export default function DashboardPage() {
   const { user } = useAuthStore();
