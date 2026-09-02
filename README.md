@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # VetInventory - Sistema de Gestión para Veterinarias
 
 Aplicación web de inventario para veterinarias con autenticación, gestión de productos, ventas y reportes financieros.
@@ -99,3 +100,6 @@ src/
 ## Licencia
 
 MIT
+=======
+# VetInventory
+>>>>>>> d08ec1fb81056f85851b9b2d5610cfe22793fd30
