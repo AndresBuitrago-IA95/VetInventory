@@ -128,7 +128,7 @@ export default function ReportsPage() {
           </div>
           {/* Legend */}
           <div className="mt-4 space-y-2">
-            {categoryData.map((entry, index) => (
+            {(categoryData as CategoryData[]).map((entry, index) => (
               <div key={index} className="flex items-center">
                 <div
                   className="w-3 h-3 rounded-full mr-2"
@@ -252,8 +252,13 @@ function prepareMonthlyData(sales: any[]) {
   return Object.values(monthlyData).slice(-12); // Last 12 months
 }
 
-function prepareCategoryData(sales: any[]) {
-  const categoryData: any = {};
+interface CategoryData {
+  name: string;
+  value: number;
+}
+
+function prepareCategoryData(sales: any[]): CategoryData[] {
+  const categoryData: Record<string, CategoryData> = {};
   sales.forEach((sale) => {
     sale.items.forEach((item: any) => {
       // Extract category from product name or use "General"
