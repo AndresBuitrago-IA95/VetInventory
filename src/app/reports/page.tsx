@@ -239,7 +239,7 @@ function calculateFinancialSummary(sales: any[]) {
 }
 
 function prepareMonthlyData(sales: any[]) {
-  const monthlyData: any[] = {};
+  const monthlyData: Record<string, { month: string; revenue: number }> = {};
   sales.forEach((sale) => {
     const date = new Date(sale.createdAt?.toString() || "");
     const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`;
